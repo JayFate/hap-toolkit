@@ -43,5 +43,10 @@ Array [
     "name": "com.application.demo.sub3.srpk",
     "pageChunks": "{\\"modules/modSubAll.js\\":\\"\\",\\"modules/modSub12.js\\":\\"\\",\\"modules/modSub2.js\\":\\"\\",\\"modules/modSub1.js\\":\\"\\"}",
   },
+  Object {
+    "jsonPath": "Card/page-chunks.json",
+    "name": "com.application.demo.Card.srpk",
+    "pageChunks": "",
+  },
 ]
 `;

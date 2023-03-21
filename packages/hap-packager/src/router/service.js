@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import path from 'path'
+import path from '@jayfate/path'
 import fs from 'fs'
 import { colorconsole, getIPv4IPAddress, getClientIPAddress } from '@hap-toolkit/shared-utils'
 
@@ -23,7 +23,7 @@ const LINK_MODE = {
 function getProjectInfo(projectPath, src) {
   try {
     const pathManifest = path.join(projectPath, src, `manifest.json`)
-    const contManifest = require(pathManifest)
+    const contManifest = JSON.parse(fs.readFileSync(pathManifest, 'utf8'))
     let projectName = (contManifest && contManifest.package) || 'Bundle'
     let projectVersion = (contManifest && contManifest.versionName) || '1.0.0'
     return {

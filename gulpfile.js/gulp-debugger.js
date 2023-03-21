@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2021, the hapjs-platform Project Contributors
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright (C) 2017, hapjs.org. All rights reserved.
  */
 const path = require('path')
 const gulp = require('gulp')

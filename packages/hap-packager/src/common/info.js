@@ -4,12 +4,12 @@
  */
 
 import fs from 'fs'
-import path from 'path'
+import path from '@jayfate/path'
 import { readJson } from '@hap-toolkit/shared-utils'
 
 export const name = {
   // 支持的后缀名列表
-  extList: ['.mix', '.ux', '.ts'],
+  extList: ['.mix', '.ux', '.vue', '.ts'],
   // 富文本支持的类型
   richtextType: ['mix', 'ux']
 }
@@ -34,7 +34,7 @@ export function resolveFile(scriptFilePath) {
  * @return {array}
  */
 export function getEntryFiles(entry) {
-  const entryFiles = Object.keys(entry || {}).map(file => {
+  const entryFiles = Object.keys(entry || {}).map((file) => {
     return file + '.js'
   })
   return entryFiles

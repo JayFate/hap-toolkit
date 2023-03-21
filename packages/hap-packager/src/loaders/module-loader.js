@@ -3,8 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-'use strict'
-
 import { logWarn } from '@hap-toolkit/shared-utils'
 import scripter from '@hap-toolkit/compiler/lib/script'
 import { searchModuleImport } from '../common/shared'

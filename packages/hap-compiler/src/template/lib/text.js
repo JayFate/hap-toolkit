@@ -2,6 +2,7 @@
  * Copyright (c) 2021, the hapjs-platform Project Contributors
  * SPDX-License-Identifier: Apache-2.0
  */
+
 'use strict'
 
 const tagSource = '{{{([\\s\\S]+?)}}}|{{([\\s\\S]+?)}}' // {{ }} 格式

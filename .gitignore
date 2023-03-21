@@ -17,7 +17,11 @@ temp-test-*
 /packages/*/lib
 /test/build
 /test/dist
+project-vue-demo-testapp
 /packages/*/test/build
 
 scripts
+!packages/hap-dsl-xvm/templates/app/demo/scripts
 dist
+
+workspace.code-workspace

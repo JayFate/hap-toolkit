@@ -11,8 +11,8 @@ export function createSocketServer(server, app) {
   // 暂时绑定io
   app.context.io = io
 
-  io.on('connection', socket => {
-    io.on('error', err => {
+  io.on('connection', (socket) => {
+    io.on('error', (err) => {
       colorconsole.error(`### App Socket Server ### websocket server发生错误: ${err.message}`)
     })
     colorconsole.info(

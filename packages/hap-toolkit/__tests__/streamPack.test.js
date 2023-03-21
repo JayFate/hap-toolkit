@@ -4,7 +4,7 @@
  */
 
 const fs = require('fs')
-const path = require('path')
+const path = require('@jayfate/path')
 const del = require('del')
 const glob = require('glob')
 const JSZip = require('jszip')
@@ -59,7 +59,7 @@ describe('resign quickapp', () => {
         }
       }
 
-      await del([tempAppDir])
+      await del([tempAppDir], { force: true })
     },
     5 * 60 * 1000
   )
@@ -111,7 +111,7 @@ describe('resign quickapp', () => {
         }
       }
 
-      await del([tempAppDir])
+      await del([tempAppDir], { force: true })
     },
     5 * 60 * 1000
   )

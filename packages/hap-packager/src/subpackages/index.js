@@ -18,7 +18,7 @@ async function createZipBufferForPackage(packageInst) {
 
   // Step1. 创建META的ZIP流
   const fileDigestHash = {}
-  resourceList.forEach(resourceFile => {
+  resourceList.forEach((resourceFile) => {
     const key = resourceFile.fileBuildPath
     fileDigestHash[key] = resourceFile.fileContentDigest.toString('hex')
   })
@@ -42,7 +42,7 @@ async function createZipBufferForPackage(packageInst) {
     content: metaZipBuffer
   })
 
-  resourceList.forEach(resourceFile => {
+  resourceList.forEach((resourceFile) => {
     packageFileList.push({
       path: resourceFile.fileBuildPath,
       content: resourceFile.fileContentBuffer

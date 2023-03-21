@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import path from 'path'
+import path from '@jayfate/path'
 
 // 路径
 const pathToolkit = path.resolve(__dirname, '../../..')

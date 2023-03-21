@@ -2,10 +2,12 @@
  * Copyright (c) 2021, the hapjs-platform Project Contributors
  * SPDX-License-Identifier: Apache-2.0
  */
+
+
 'use strict'
 
 const fs = require('fs-extra')
-const path = require('path')
+const path = require('@jayfate/path')
 const glob = require('glob')
 const del = require('del')
 const webpack = require('webpack')
@@ -42,7 +44,7 @@ function $fun2str(data, fix) {
 }
 
 /**
- * 用 webpack 编译 ux/mix 文件
+ * 用 webpack 编译 ux/mix/vue 文件
  *
  * @param {[]} entries - 输入的文件
  * @returns {Promise}
@@ -50,7 +52,7 @@ function $fun2str(data, fix) {
 function compilePage(uxfile, type) {
   // TODO 先收集需要测试的文件，再执行编译
   return new Promise((resolve, reject) => {
-    const jsfile = uxfile.replace(/\.(ux|mix)/, '')
+    const jsfile = uxfile.replace(/\.(ux|mix|vue)/, '')
     type = type || 'page'
     webpackConf.entry = {
       [jsfile]: `./${uxfile}?uxType=${type}`
@@ -79,7 +81,7 @@ function compileFiles(entries, type = 'ux') {
 }
 
 function resolveEntries(cwd, prefix) {
-  const files = glob.sync('**/*.{ux,mix}', { cwd })
+  const files = glob.sync('**/*.{ux,mix,vue}', { cwd })
   const entries = files
     .filter(file => file.startsWith(prefix))
     .reduce((obj, file) => {
@@ -87,7 +89,7 @@ function resolveEntries(cwd, prefix) {
       if (file.match(/\/common\//i)) {
         return obj
       }
-      const outputName = file.replace(/\.(ux|mix)/, '')
+      const outputName = file.replace(/\.(ux|mix|vue)/, '')
       const type = file.indexOf('TestCard') >= 0 ? 'card' : 'page'
       obj[outputName] = `./${file}?uxType=${type}`
       return obj

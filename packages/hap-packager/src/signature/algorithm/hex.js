@@ -9,7 +9,7 @@
 var Hex = {},
   decoder
 
-Hex.decode = function(a) {
+Hex.decode = function (a) {
   var i
   if (decoder === undefined) {
     var hex = '0123456789ABCDEF',

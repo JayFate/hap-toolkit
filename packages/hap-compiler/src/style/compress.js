@@ -124,7 +124,7 @@ function compressDescSelector(itemList) {
   for (let i = 0; i < itemList.length; i++) {
     const item = itemList[i] || {}
 
-    cssDescSelectorList.forEach(function(ccl) {
+    cssDescSelectorList.forEach(function (ccl) {
       if (item.hasOwnProperty(ccl.oldN)) {
         item[ccl.newN] = item[ccl.oldN]
         delete item[ccl.oldN]

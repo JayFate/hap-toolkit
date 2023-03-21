@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import path from 'path'
+import path from '@jayfate/path'
 import fs from 'fs-extra'
 import glob from 'glob'
 
@@ -43,7 +43,7 @@ async function resign(options = {}) {
   const output = path.resolve(projectPath, options.dest)
   const reletivePath = path.resolve(projectPath, options.origin)
 
-  const filePromises = files.map(async item => {
+  const filePromises = files.map(async (item) => {
     let fileBuffer = fs.readFileSync(path.resolve(reletivePath, item))
     if (item.endsWith('.rpk')) {
       fileBuffer = await signForRpk(fileBuffer, privatekeyContent, certificateContent)

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import path from 'path'
+import path from '@jayfate/path'
 import mount from 'koa-mount'
 import globalConfig from '@hap-toolkit/shared-utils/config'
 import createPrview from './create-preview'

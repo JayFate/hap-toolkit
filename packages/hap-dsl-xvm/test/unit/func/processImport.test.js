@@ -2,8 +2,10 @@
  * Copyright (c) 2021, the hapjs-platform Project Contributors
  * SPDX-License-Identifier: Apache-2.0
  */
+
+
 'use strict'
-const path = require('path')
+const path = require('@jayfate/path')
 const { processImport } = require('@hap-toolkit/compiler/lib/style/process')
 const testCssDir = path.resolve(__dirname, '../../case/ux/Helloworld/Common')
 

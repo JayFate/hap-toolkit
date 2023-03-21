@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2021, the hapjs-platform Project Contributors
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright (C) 2017, hapjs.org. All rights reserved.
  */
 
 const path = require('path')
@@ -34,7 +33,7 @@ const modules = {
 const moduleNames = Object.keys(modules)
 const tasks = []
 
-moduleNames.forEach(moduleName => {
+moduleNames.forEach((moduleName) => {
   if (modules[moduleName].default) {
     target[moduleName] = modules[moduleName].default
     tasks.push(target[moduleName])
@@ -42,9 +41,9 @@ moduleNames.forEach(moduleName => {
 })
 target.default = gulp.parallel.apply(gulp, tasks)
 
-taskNames.forEach(taskName => {
+taskNames.forEach((taskName) => {
   const tasks = []
-  moduleNames.forEach(moduleName => {
+  moduleNames.forEach((moduleName) => {
     const module = modules[moduleName]
     if (module[taskName]) {
       tasks.push(module[taskName])

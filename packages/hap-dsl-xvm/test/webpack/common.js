@@ -12,7 +12,7 @@ exports.resolveEntries = function resolveEntries(cwd, pattern) {
     if (file.match(/\/common\//i)) {
       return obj
     }
-    const outputName = file.replace(/\.(ux|mix)$/, '')
+    const outputName = file.replace(/\.(ux|mix|vue)$/, '')
     const type = file.indexOf('TestCard') >= 0 ? 'card' : 'page'
     obj[outputName] = `./${file}?uxType=${type}`
     return obj

@@ -43,7 +43,7 @@ function transExpr(expContent, toFunc) {
     ret = []
     const tokens = textParser.parseText(trimExpContent)
     const isSingle = tokens.length === 1
-    tokens.forEach(function(token) {
+    tokens.forEach(function (token) {
       if (token.tag) {
         let res = expParser.parseExpression(parseFilter(token.value))
         if (!isSingle) {

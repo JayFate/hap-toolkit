@@ -47,10 +47,10 @@ class ADBModule {
    */
   init() {
     debuglog(`init(): start`)
-    this.devicesEmitter.addEventListener('deviceAdded', event => {
+    this.devicesEmitter.addEventListener('deviceAdded', (event) => {
       this._listen(event, this.onDeviceAdded.bind(this))
     })
-    this.devicesEmitter.addEventListener('deviceRemoved', event => {
+    this.devicesEmitter.addEventListener('deviceRemoved', (event) => {
       this._listen(event, this.onDeviceRemoved.bind(this))
     })
     this.devicesEmitter.start()
@@ -194,7 +194,7 @@ class ADBModule {
   async _writeClientLogFile(newClient) {
     try {
       const { clientRecordPath } = globalConfig
-      recordClient(clientRecordPath, newClient, msg => {
+      recordClient(clientRecordPath, newClient, (msg) => {
         debuglog(msg)
       })
     } catch (err) {
@@ -210,7 +210,7 @@ class ADBModule {
   async _removeItemFromClientLogFile(sn) {
     try {
       const { clientRecordPath } = globalConfig
-      removeClientBySn(clientRecordPath, sn, msg => {
+      removeClientBySn(clientRecordPath, sn, (msg) => {
         debuglog(msg)
       })
     } catch (err) {
@@ -277,6 +277,11 @@ class ADBModule {
       await this.commander.print(`adb -s ${args[0]} ${type} --list`)
     }
     return result
+  }
+
+  _stop() {
+    colorconsole.log(`### ADB stop`)
+    this.devicesEmitter.stop()
   }
 }
 

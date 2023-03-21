@@ -12,7 +12,7 @@ import { logWarn } from '@hap-toolkit/shared-utils'
 
 import { convertPath } from './common/utils'
 
-module.exports = function(source) {
+module.exports = function (source) {
   const options = loaderUtils.parseQuery(this.resourceQuery)
   options['filePath'] = this.resourcePath
   const { parsed, log, depFiles } = parseTemplate(source, options)
@@ -20,7 +20,7 @@ module.exports = function(source) {
   if (log && log.length) {
     logWarn(this, log)
   }
-  depFiles.forEach(file => {
+  depFiles.forEach((file) => {
     this.addDependency(convertPath(file))
   })
   return `module.exports = ${parsed}`

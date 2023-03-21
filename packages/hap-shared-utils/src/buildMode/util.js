@@ -4,7 +4,7 @@
  */
 
 import fs from 'fs'
-import path from 'path'
+import path from '@jayfate/path'
 import globalConfig from '../../config'
 
 export const CONFIG_FILE = '.quickapp.preview.json'
@@ -55,7 +55,7 @@ export function getLaunchPage() {
     try {
       const { modeOptions } = readJson(proConfPath)
       if (modeOptions && typeof modeOptions.current === 'number' && modeOptions.list) {
-        const mode = modeOptions.list.find(item => {
+        const mode = modeOptions.list.find((item) => {
           return item.id === modeOptions.current
         })
         if (mode) {
