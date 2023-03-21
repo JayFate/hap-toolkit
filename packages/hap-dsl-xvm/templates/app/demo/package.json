@@ -43,7 +43,7 @@
     }
   },
   "lint-staged": {
-    "**/**.{ux,js,json,pcss,md,vue}": [
+    "**/**.{ux,js,json,pcss,md}": [
       "prettier --write",
       "git add"
     ]

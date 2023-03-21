@@ -37,7 +37,6 @@ const FILE_EXT_NORES = FILE_EXT_LIST.concat([
   '.coffee',
   '.ts',
   '.tsx',
-  '.vue',
   '.css',
   '.less',
   '.sass',

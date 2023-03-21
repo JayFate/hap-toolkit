@@ -9,7 +9,7 @@ import { readJson } from '@hap-toolkit/shared-utils'
 
 export const name = {
   // 支持的后缀名列表
-  extList: ['.mix', '.ux', '.vue', '.ts'],
+  extList: ['.mix', '.ux', '.ts'],
   // 富文本支持的类型
   richtextType: ['mix', 'ux']
 }

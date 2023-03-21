@@ -20,7 +20,7 @@ import {
 } from '../utils'
 
 // 支持的后缀名列表
-const extList = ['.mix', '.ux', '.vue']
+const extList = ['.mix', '.ux']
 // 富文本支持的类型
 const richtextType = ['mix', 'ux']
 

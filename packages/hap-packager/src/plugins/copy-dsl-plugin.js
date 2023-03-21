@@ -51,6 +51,7 @@ CopyDslPlugin.prototype.copyFile = function (callback) {
     callback()
     return
   }
+  // TODO rm dsl vue ?
   const dslName = this.options?.config?.dsl?.name || 'vue'
   const readPath = `${this.options.cwd}/node_modules/${packageName}/dist/release/dsls/${dslName}.js`
   const writePath = `${this.options.cwd}/build/dsl.js`

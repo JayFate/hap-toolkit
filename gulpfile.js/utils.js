@@ -32,8 +32,7 @@ const nameMap = {
   p: 'packager',
   s: 'server',
   t: 'toolkit',
-  x: 'dsl-xvm',
-  v: 'dsl-vue'
+  x: 'dsl-xvm'
 }
 const isWatchMode = process.argv.indexOf('watch') !== -1
 const moduleOpts = ['--modules', '-m']

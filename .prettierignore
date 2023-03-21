@@ -14,5 +14,4 @@ node_modules
 .prettierrc
 /packages/hap-toolkit/fixtures/temp-test-app*
 /packages/hap-dsl-xvm/test/
-/packages/hap-dsl-vue/test/
 /examples/sample/**
