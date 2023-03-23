@@ -5214,6 +5214,11 @@ Object.defineProperty(exports, \\"__esModule\\", {
 exports.default = void 0;
 var _manifest = _interopRequireDefault(require(\\"../manifest.json\\"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+/*
+ * Copyright (c) 2023, the hapjs-platform Project Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 class A1 {}
 var _default = {
   A1,

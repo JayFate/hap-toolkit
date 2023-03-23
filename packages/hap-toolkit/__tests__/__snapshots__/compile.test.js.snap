@@ -67,6 +67,11 @@ $app_bootstrap$('@app-component/index',{ packagerVersion: QUICKAPP_TOOLKIT_VERSI
 exports[`测试compile compile build devtool=false 5`] = `
 "\\"use strict\\";
 
+/*
+ * Copyright (c) 2023, the hapjs-platform Project Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 console.log('hello worker');
 postMessage({
   msg: 'hello from worker: ' + utils.test(),

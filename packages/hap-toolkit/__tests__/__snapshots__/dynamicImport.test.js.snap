@@ -259,6 +259,11 @@ Object.defineProperty(exports, \\"__esModule\\", {
 });
 exports.getGlobalData = getGlobalData;
 exports.setGlobalData = setGlobalData;
+/*
+ * Copyright (c) 2023, the hapjs-platform Project Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 /**
  * @file 全局能力的配置与获取
  */
@@ -298,6 +303,11 @@ Object.defineProperty(exports, \\"__esModule\\", {
   value: true
 });
 exports.default = exports.b = exports.a = void 0;
+/*
+ * Copyright (c) 2023, the hapjs-platform Project Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 const a = 1;
 exports.a = a;
 const b = 2;

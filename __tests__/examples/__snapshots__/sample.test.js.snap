@@ -43876,6 +43876,11 @@ Object.defineProperty(exports, \\"__esModule\\", {
   value: true
 });
 exports.grayFilter = exports.drawLogo = exports.drawGradientLogo = exports.drawClock = void 0;
+/*
+ * Copyright (c) 2023, the hapjs-platform Project Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 const dayArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const drawClock = (size, cns, clockd) => {
@@ -44165,6 +44170,11 @@ Object.defineProperty(exports, \\"__esModule\\", {
   value: true
 });
 exports.tabsData = void 0;
+/*
+ * Copyright (c) 2023, the hapjs-platform Project Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 const tabsData = {
   framework: {
     name: '框架',
@@ -44496,6 +44506,11 @@ exports.tabsData = tabsData;"
 
 exports[`hap-toolkit compile native: <CWD>/packages/hap-packager/lib/loaders/module-loader.js!<CWD>/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[1].use[1]!<project-root>/src/regenerator.js 1`] = `
 "\\"use strict\\";
+
+/*
+ * Copyright (c) 2023, the hapjs-platform Project Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
 const injectRef = Object.getPrototypeOf(global) || global;
 
