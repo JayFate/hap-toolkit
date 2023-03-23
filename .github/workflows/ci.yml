@@ -16,19 +16,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      # - name: Install pnpm
+      #   uses: pnpm/action-setup@v2
 
       - name: Set node version to 18
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'pnpm'
+          # cache: 'pnpm'
 
       - run: npx envinfo --registry https://registry.npmmirror.com/
 
       - run: yarn install --registry https://registry.npmmirror.com/
-      - run: cd examples/sample && yarn install --registry https://registry.npmmirror.com/ && cd ../..
 
       - name: Build
         run: npm run build
@@ -37,26 +36,25 @@ jobs:
         run: npm run prettier-check
 
       - name: Tests
-        run: npm run test-unit
+        run: npm run test
 
-  test:cov:
+  test-cov:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      # - name: Install pnpm
+      #   uses: pnpm/action-setup@v2
 
       - name: Set node version to 18
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'pnpm'
+          # cache: 'pnpm'
 
       - run: npx envinfo --registry https://registry.npmmirror.com/
 
       - run: yarn install --registry https://registry.npmmirror.com/
-      - run: cd examples/sample && yarn install --registry https://registry.npmmirror.com/ && cd ../..
 
       - name: Build
         run: npm run build:dev

@@ -21,7 +21,8 @@
     "pack-sourcemaps": "lerna exec \"find . -path ./node_modules -prune -o -name *.js.map -print0 | tar -czvf sourcemaps.tgz --null -T -\"",
     "prettier": "prettier \"**/*.{js,ts,tsx,md,css,html,yml}\" --write",
     "prettier-check": "prettier --list-different \"**/*.{js,ts,tsx,md,css,html,yml}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "cd examples/sample && yarn install --registry https://registry.npmmirror.com/ && cd ../.."
   },
   "husky": {
     "hooks": {
