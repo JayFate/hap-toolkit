@@ -22,7 +22,7 @@ jobs:
       - name: Set node version to 18
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
           # cache: 'pnpm'
 
       - run: npx envinfo --registry https://registry.npmmirror.com/
@@ -49,7 +49,7 @@ jobs:
       - name: Set node version to 18
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
           # cache: 'pnpm'
 
       - run: npx envinfo --registry https://registry.npmmirror.com/
